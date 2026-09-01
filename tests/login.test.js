@@ -17,7 +17,7 @@ export const options = {
 }
 
 export default function () {
-    const url = 'http://localhost:3000/login';
+    const url = pegarBaseURL() + '/login';
 
     postlogin.username = "junior.lima"
     console.log(postlogin)

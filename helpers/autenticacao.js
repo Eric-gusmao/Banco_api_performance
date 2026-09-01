@@ -1,10 +1,10 @@
 import http from 'k6/http'
+import { pegarBaseURL } from '../utils/varialve.js'
 const postlogin = JSON.parse(open('../fixtures/postlogin.json'))
 
 export function obterToken() {
-    const url = 'http://localhost:3000/login';
+    const url = pegarBaseURL() + '/login';
 
-    console.log(postlogin)
     const payload = JSON.stringify(postlogin);
 
     const params = {
